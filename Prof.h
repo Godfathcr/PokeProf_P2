@@ -14,10 +14,10 @@ protected:
 	int vitesse;
 	int attaquePuissance;
 	int defense;
-	 int vitesseBase;
-	 int attaquePuissanceBase;
-	 int defenseBase;
-	 int vieBase;
+	int vitesseBase;
+	int attaquePuissanceBase;
+	int defenseBase;
+	int vieBase;
 	int etat;
 	string sprite;
 	Sort<Prof> *sort;
@@ -29,27 +29,27 @@ public:
 	void attaquer(int m_sort, Prof ennemi);
 
 	int setVie(int niveauVie);
-	int getVie();
+	int Vie();
 
 	string setNom(string nomProf);
-	string getNom();
+	string Nom();
 
 	int setVitesse(int vitesse);
-	int getVitesse();
+	int Vitesse();
 
-	int getAttaquePuissance();
+	int AttaquePuissance();
 	int setAttaquePuissance(int attaque);
 
-	int getDefense();
+	int Defense();
 	int setDefense(int def);
 
-	int getDefenseBase();
-	int getVitesseBase();
-	int getAttaquePuissanceBase();
-	int getVieBase();
+	int DefenseBase();
+	int VitesseBase();
+	int AttaquePuissanceBase();
+	int VieBase();
 
 
-	int getEtat();
+	int Etat();
 	int setEtat(int m_etat);
 
 	string getSprite();

@@ -17,7 +17,7 @@ Prof::~Prof()
 
 void Prof::changerEtat()
 {
-	etat = getEtat();
+	etat = Etat();
 }
 
 void Prof::attaquer(int m_sort, Prof ennemi)
@@ -42,7 +42,7 @@ int Prof::setVie(int niveauVie)
 	return vie;
 }
 
-int Prof::getVie()
+int Prof::Vie()
 {
 	return vie;
 }
@@ -53,7 +53,7 @@ string Prof::setNom(string nomProf)
 	return nom;
 }
 
-string Prof::getNom()
+string Prof::Nom()
 {
 	return nom;
 }
@@ -64,12 +64,12 @@ int Prof::setVitesse(int vitesse)
 	return 0;
 }
 
-int Prof::getVitesse()
+int Prof::Vitesse()
 {
 	return vitesse;
 }
 
-int Prof::getAttaquePuissance()
+int Prof::AttaquePuissance()
 {
 	return attaquePuissance;
 }
@@ -80,7 +80,7 @@ int Prof::setAttaquePuissance(int attaque)
 	return attaquePuissance;
 }
 
-int Prof::getDefense()
+int Prof::Defense()
 {
 	return defense;
 }
@@ -99,27 +99,27 @@ int Prof::setDefense(int def)
 	return defense;
 }
 
-int Prof::getDefenseBase()
+int Prof::DefenseBase()
 {
 	return defenseBase;
 }
 
-int Prof::getVitesseBase()
+int Prof::VitesseBase()
 {
 	return vitesseBase;
 }
 
-int Prof::getAttaquePuissanceBase()
+int Prof::AttaquePuissanceBase()
 {
 	return attaquePuissanceBase;
 }
 
-int Prof::getVieBase()
+int Prof::VieBase()
 {
 	return vieBase;
 }
 
-int Prof::getEtat()
+int Prof::Etat()
 {
 	return etat;
 }
