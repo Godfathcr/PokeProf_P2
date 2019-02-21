@@ -127,10 +127,10 @@ int Prof::Etat()
 int Prof::setEtat(int  m_etat)
 {
 	etat = m_etat;
-	if (etat == 1)return etat;
+	/*if (etat == 1)return etat;
 	if (etat == 2)return etat;
 	if (etat == 3)return etat;
-	if (etat == 4)return etat;
+	if (etat == 4)return etat;*/
 	return etat;
 }
 
@@ -139,7 +139,7 @@ string Prof::getSprite()
 	return sprite;
 }
 
-/*vector<Sort> Prof::getSort()
+/*vector<Sort<Prof>> Prof::getSort()
 {
 	return vector<Sort>();
 }*/
@@ -149,9 +149,9 @@ void Prof::afficher() {
 	cout << "----Test classe Prof----" << endl;
 	
 	cout << "Votre Poke-Prof est : " <<  endl;
-	cout << nom << endl;
-	cout << "Niveau de vie : " << vie << endl;
-	cout << "Defense : " << defense << endl;
+	cout << Nom() << endl;
+	cout << "Niveau de vie : " << Vie() << endl;
+	cout << "Defense : " << Defense() << endl;
 	cout << "Etat : " << endl;
 	if (etat == 1)cout << "Neutre" << endl;
 	if (etat == 2)cout << "Saoul" << endl;
