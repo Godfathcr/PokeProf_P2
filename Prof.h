@@ -38,10 +38,10 @@ public:
 	int getVitesse();
 
 	int getAttaquePuissance();
-	int setAttaquePuissance(int attaque);
+	int setAttaquePuissance(float attaque);
 
 	int getDefense();
-	int setDefense(int def);
+	int setDefense(float def);
 
 	int getDefenseBase();
 	int getVitesseBase();

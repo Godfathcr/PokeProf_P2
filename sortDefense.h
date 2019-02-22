@@ -15,7 +15,8 @@ public:
 	~SortDefense() {}
 	void virtual activation(T &toi,T &ennemi)
 	{
-		toi.setDefense(toi.getDefense()*1.25);
+		toi.setDefense(1.25);
+		cout << toi.getDefense() << endl;
 		cout << toi.getNom() << " utilise " << nom << endl << "La defense de " << toi.getNom() << " augumente" << endl;
 	}
 };
