@@ -20,13 +20,13 @@ protected:
 	 int vieBase;
 	int etat;
 	string sprite;
-	Sort<Prof> *sort;
+	Sort<Prof> **sort;
 
 public:
 	Prof();
 	virtual ~Prof();
 	void changerEtat();
-	void attaquer(int m_sort, Prof ennemi);
+	void attaquer(int m_sort, Prof* ennemi);
 
 	int setVie(int niveauVie);
 	int getVie();

@@ -13,9 +13,9 @@ public:
 	~SortExample1() {}
 	virtual void activation(T &toi, T &ennemi) 
 	{
-		int dommage = -2 * toi.getAttaquePuissance() / ennemi.getDefense();
+		int dommage = -40 * toi.getAttaquePuissance() / ennemi.getDefense();
 		ennemi.setVie(dommage);
-		cout << toi.getNom() << " utilise " << nom << endl << ennemi.getNom() << " a recu " << dommage << " hp de dommage" << endl;
+		cout << toi.getNom() << " utilise " << nom << endl << ennemi.getNom() << " a recu " << -dommage << " hp de dommage" << endl;
 	}
 	
 };

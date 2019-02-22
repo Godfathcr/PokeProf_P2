@@ -20,11 +20,11 @@ void Prof::changerEtat()
 	etat = getEtat();
 }
 
-void Prof::attaquer(int m_sort, Prof ennemi)
+void Prof::attaquer(int m_sort, Prof *ennemi)
 {
-	sort[m_sort].activation(*this, ennemi);
-
+	sort[m_sort]->activation(*this, *ennemi);
 }
+
 
 int Prof::setVie(int niveauVie)
 {
