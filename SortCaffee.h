@@ -14,7 +14,7 @@ public:
 		description = "Augmente la vitesse de beaucoup, mais avec des chances d'empoisonner";
 	}
 	~SortCaffee() {}
-	void activation(<T>& , <T>&)
+	void virtual activation(T &toi, T &ennemi)
 	{
 		if (rand() % 10 < 3)
 		{

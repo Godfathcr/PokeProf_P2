@@ -2,12 +2,14 @@
 #include "Sort.h"
 #include <iostream>
 #include <string>
+#include<ctime>
 
 using namespace std; 
 
 Prof::Prof()
 {
 	etat = 0;
+	srand((unsigned)time(0));
 }
 
 
@@ -20,11 +22,18 @@ void Prof::changerEtat()
 	etat = Etat();
 }
 
-void Prof::attaquer(int m_sort, Prof ennemi)
+void Prof::attaquer(int m_sort, Prof *ennemi)
 {
-	sort[m_sort].activation(*this, ennemi);
-
+	if (rand() % 100 > sort[m_sort]->getAccuracy())
+	{
+		sort[m_sort]->activation(*this, *ennemi);
+	}
+	else
+	{
+		cout << nom << " manque son attaque"<<endl;
+	}
 }
+
 
 int Prof::setVie(int niveauVie)
 {
@@ -74,10 +83,10 @@ int Prof::AttaquePuissance()
 	return attaquePuissance;
 }
 
-int Prof::setAttaquePuissance(int attaque)
+int Prof::setAttaquePuissance(float attaque)
 {
-	attaquePuissance = attaque;
-	return attaquePuissance;
+	attaquePuissance *= attaque;
+	return defense;
 }
 
 int Prof::Defense()
@@ -85,14 +94,10 @@ int Prof::Defense()
 	return defense;
 }
 
-int Prof::setDefense(int def)
+int Prof::setDefense(float def)
 {
-	defense = defense + def;
-	if (defense > defenseBase)
-	{
-		defense = defenseBase;
-	}
-	else if (defense < 0)
+	defense = defense * def;
+	if (defense < 0)
 	{
 		defense = 0;
 	}
