@@ -17,6 +17,14 @@ public:
 	{
 		return accuracy;
 	}
+	string getNom()
+	{
+		return nom;
+	}
+	string getDescription()
+	{
+		return description();
+	}
 protected:
 	int accuracy;
 	string description;
