@@ -11,6 +11,6 @@ public:
 	string Image();
 
 private :
-	string Image();
+	string image;
 };
 

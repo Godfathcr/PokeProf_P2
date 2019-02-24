@@ -19,12 +19,12 @@ public:
 		if (rand() % 10 < 3)
 		{
 			toi.setEtat(4);
-			cout << toi.getNom() << " manque " << nom << endl << toi.getNom() << " devient empoisonne" << endl;
+			cout << toi.Nom() << " manque " << nom << endl << toi.Nom() << " devient empoisonne" << endl;
 		}
 		else
 		{
-			toi.setVitesse(toi.getVitesse()*1.25*1.25);
-			cout << toi.getNom() << " utilise " << nom << endl << "La vitesse de " << toi.getNom() << " augmente beaucoup" << endl;
+			toi.setVitesse(toi.Vitesse()*1.25*1.25);
+			cout << toi.Nom() << " utilise " << nom << endl << "La vitesse de " << toi.Nom() << " augmente beaucoup" << endl;
 		}
 	}
 };

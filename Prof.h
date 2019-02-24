@@ -37,19 +37,11 @@ public:
 	int setVitesse(int vitesse);
 	int Vitesse();
 
-<<<<<<< HEAD
 	int AttaquePuissance();
-	int setAttaquePuissance(int attaque);
-
-	int Defense();
-	int setDefense(int def);
-=======
-	int getAttaquePuissance();
 	int setAttaquePuissance(float attaque);
 
-	int getDefense();
+	int Defense();
 	int setDefense(float def);
->>>>>>> origin/master
 
 	int DefenseBase();
 	int VitesseBase();
