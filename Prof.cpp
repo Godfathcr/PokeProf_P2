@@ -30,11 +30,7 @@ void Prof::attaquer(int m_sort, Prof *ennemi)
 	}
 	else
 	{
-<<<<<<< HEAD
 		cout << nom << " manque son attaque" <<endl << endl;
-=======
-		cout << nom <<" utilise "<<sort[m_sort]->getNom()<<endl<<nom<< " manque son attaque"<<endl;
->>>>>>> origin/master
 	}
 }
 
