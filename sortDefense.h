@@ -9,7 +9,7 @@ public:
 	{
 		accuracy = 100;
 		nom = "Defendre";
-		description = "Augumente la defense";
+		description = "Augmente la defense";
 
 	}
 	~SortDefense() {}
@@ -17,7 +17,7 @@ public:
 	{
 		toi.setDefense(1.25);
 		cout << toi.Defense() << endl;
-		cout << toi.Nom() << " utilise " << nom << endl << "La defense de " << toi.Nom() << " augumente" << endl;
+		cout << toi.Nom() << " utilise " << nom << endl << "La defense de " << toi.Nom() << " augmente" << endl;
 	}
 };
 

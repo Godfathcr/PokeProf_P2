@@ -1,5 +1,6 @@
 #include "fenetreprincipal.h"
 #include "profexample1.h"
+#include "combat.h"
 //#include <QApplication>
 
 
@@ -12,16 +13,12 @@ int main(int argc, char *argv[])
 	
 
     return a.exec();*/
-
-	ProfExample1 prof;
-	ProfExample1 prof2;
-	prof2.afficher();
-	prof.attaquer(0, &prof2);
-	prof2.afficher();
-	prof.attaquer(1, &prof2);
-	prof2.attaquer(0, &prof);
-	prof.afficher();
-	prof2.afficher();
+	
+	Combat c;
+	c.SelectionTerrain();
+	c.SelectionPersonnages();
+	c.Regles();
+	c.DebuterCombat();
 
 	return 0;
 

@@ -1,10 +1,10 @@
 #pragma once
 #include "Prof.h"
-class ProfExample1 :
+class ProfExample2 :
 	public Prof
 {
 public:
-	ProfExample1();
-	~ProfExample1();
+	ProfExample2();
+	~ProfExample2();
 };
 

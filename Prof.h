@@ -52,8 +52,11 @@ public:
 	int Etat();
 	int setEtat(int m_etat);
 
+	bool EnVie();
 	string getSprite();
 	void afficher();
+	void afficherSorts();
+	int QuantiteDeSort();
 
 };
 

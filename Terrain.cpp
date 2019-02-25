@@ -6,6 +6,10 @@ Terrain::Terrain()
 {
 }
 
+Terrain::Terrain(string img)
+{
+	image = img;
+}
 
 Terrain::~Terrain()
 {

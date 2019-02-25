@@ -24,7 +24,7 @@ public:
 		else
 		{
 			toi.setVitesse(toi.Vitesse()*1.25*1.25);
-			cout << toi.Nom() << " utilise " << nom << endl << "La vitesse de " << toi.Nom() << " augmente beaucoup" << endl;
+			cout << toi.Nom() << " utilise " << nom << endl << "La vitesse de " << toi.Nom() << " augmente beaucoup" << endl << endl;
 		}
 	}
 };

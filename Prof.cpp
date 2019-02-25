@@ -30,7 +30,7 @@ void Prof::attaquer(int m_sort, Prof *ennemi)
 	}
 	else
 	{
-		cout << nom << " manque son attaque"<<endl;
+		cout << nom << " manque son attaque" <<endl << endl;
 	}
 }
 
@@ -144,6 +144,10 @@ string Prof::getSprite()
 	return sprite;
 }
 
+bool Prof::EnVie() {
+	return Vie() > 0;
+}
+
 /*vector<Sort<Prof>> Prof::getSort()
 {
 	return vector<Sort>();
@@ -151,17 +155,27 @@ string Prof::getSprite()
 
 
 void Prof::afficher() {
-	cout << "----Test classe Prof----" << endl;
-	
-	cout << "Votre Poke-Prof est : " <<  endl;
-	cout << Nom() << endl;
+	cout << "Votre Poke-Prof est : " << Nom() << endl;
 	cout << "Niveau de vie : " << Vie() << endl;
 	cout << "Defense : " << Defense() << endl;
-	cout << "Etat : " << endl;
+	cout << "Vitesse : " << Vitesse() << endl;
+	cout << "Etat : ";
 	if (etat == 1)cout << "Neutre" << endl;
 	if (etat == 2)cout << "Saoul" << endl;
 	if (etat == 3)cout << "Etourdis" << endl;
 	if (etat == 4)cout << "Hyperactif" << endl;
 	
 	
+}
+
+int Prof::QuantiteDeSort() {
+	return 3;
+}
+
+void Prof::afficherSorts() {
+
+	for (int i = 0; i < QuantiteDeSort(); i++) {
+		cout << i << ". " << sort[i]->Nom() << " , " << sort[i]->Description() << endl;
+	}
+	cout << endl;
 }
