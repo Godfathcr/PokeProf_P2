@@ -17,6 +17,7 @@ public:
 	{
 		return accuracy;
 	}
+<<<<<<< HEAD
 	string Nom() {
 		return nom;
 	};
@@ -25,6 +26,16 @@ public:
 		return description;
 	}
 
+=======
+	string getNom()
+	{
+		return nom;
+	}
+	string getDescription()
+	{
+		return description();
+	}
+>>>>>>> origin/master
 protected:
 	int accuracy;
 	string description;

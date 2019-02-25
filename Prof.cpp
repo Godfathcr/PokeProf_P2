@@ -24,13 +24,17 @@ void Prof::changerEtat()
 
 void Prof::attaquer(int m_sort, Prof *ennemi)
 {
-	if (rand() % 100 > sort[m_sort]->getAccuracy())
+	if (rand() % 100< sort[m_sort]->getAccuracy())
 	{
 		sort[m_sort]->activation(*this, *ennemi);
 	}
 	else
 	{
+<<<<<<< HEAD
 		cout << nom << " manque son attaque" <<endl << endl;
+=======
+		cout << nom <<" utilise "<<sort[m_sort]->getNom()<<endl<<nom<< " manque son attaque"<<endl;
+>>>>>>> origin/master
 	}
 }
 
