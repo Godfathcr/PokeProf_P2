@@ -27,13 +27,9 @@ SOURCES += \
     fenetrechoix.cpp \
     fenetrecombat.cpp \
     prof.cpp \
-    sort.cpp \
     profexample1.cpp \
-    sortexample1.cpp \
     terrain.cpp \
 	 Combat.cpp \ 
-	sortDefense.cpp \
-	sortCaffee.cpp \
 	
 
 HEADERS += \
