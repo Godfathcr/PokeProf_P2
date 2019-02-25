@@ -30,6 +30,9 @@ SOURCES += \
     profexample1.cpp \
     terrain.cpp \
 	 Combat.cpp \ 
+     Tour.cpp \
+     profexample2.cpp \
+     profexample3.cpp \
 	
 
 HEADERS += \
@@ -45,6 +48,9 @@ HEADERS += \
 	Combat.h \ 
 	sortDefense.h \
 	sortCaffee.h \
+    tour.h \
+    profexample2.h \
+    profexample3.h \
 	
 
 
