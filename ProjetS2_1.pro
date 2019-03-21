@@ -50,6 +50,7 @@ HEADERS += \
     sortDefense.h \
     sortCaffee.h \
     sortexample1.h \
+	Affection.h \
     CVrai.h \
     DiviserLesEquipes.h \
     LanceCrayon.h \

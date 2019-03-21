@@ -1,9 +1,8 @@
 #include "ProfExample2.h"
 #include "Sort.h"
-#include "sortDefense.h"
-#include "sortexample1.h"
+#include "CVrai.h"
 #include "Overtime.h"
-#include "SortCaffee.h"
+#include "Affection.h"
 #include <iostream>
 #include <string>
 
@@ -13,18 +12,18 @@ ProfExample2::ProfExample2()
 {
 	vieBase = 100;
 	defenseBase = 70;
-	vitesseBase = 50;
+	vitesseBase = 70;
 	attaquePuissanceBase = 30;
 	vie = 100;
 	defense = 70;
 	vitesse = 70;
 	attaquePuissance = 30;
 	sort = new Sort<Prof>*[3];
-	sort[0] = new SortExample1<Prof>();
+	sort[0] = new CVrai<Prof>();
 	sort[1] = new Overtime<Prof>();
-	sort[2] = new SortCaffee<Prof>();
+	sort[2] = new Affection<Prof>();
 	etat = 1;
-	nom = "Charmander";
+	nom = "Claudette";
 
 }
 

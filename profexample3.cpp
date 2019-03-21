@@ -12,7 +12,7 @@ ProfExample3::ProfExample3()
 {
 	vieBase = 100;
 	defenseBase = 70;
-	vitesseBase = 50;
+	vitesseBase = 40;
 	attaquePuissanceBase = 30;
 	vie = 100;
 	defense = 70;

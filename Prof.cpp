@@ -27,6 +27,11 @@ void Prof::attaquer(int m_sort, Prof *ennemi)
 	int random;
 	if (compteuretat <= 0)
 	{
+		if (etat == 5)
+		{
+			defense = defense / 2;
+			attaquePuissance = attaquePuissance / 2;
+		}
 		etat = 1;
 	}
 	if (etat == 4)
@@ -101,7 +106,11 @@ int Prof::AttaquePuissance()
 
 int Prof::setAttaquePuissance(float attaque)
 {
-	attaquePuissance *= attaque;
+	attaquePuissance *= attaque; 
+	if (attaquePuissance < 0)
+	{
+		attaquePuissance = 0;
+	}
 	return defense;
 }
 
@@ -152,6 +161,7 @@ int Prof::setEtat(int  m_etat)
 	if (etat == 2)return etat;
 	if (etat == 3)return etat;
 	if (etat == 4)return etat;
+	if (etat == 5)return etat;
 	return etat;
 }
 
@@ -184,6 +194,7 @@ bool Prof::EnVie() {
 void Prof::afficher() {
 	cout << "Votre Poke-Prof est : " << Nom() << endl;
 	cout << "Niveau de vie : " << Vie() << endl;
+	cout << "Attaque :" << AttaquePuissance() << endl;
 	cout << "Defense : " << Defense() << endl;
 	cout << "Vitesse : " << Vitesse() << endl;
 	cout << "Etat : ";
@@ -191,6 +202,7 @@ void Prof::afficher() {
 	if (etat == 2)cout << "Saoul" << endl;
 	if (etat == 3)cout << "Etourdis" << endl;
 	if (etat == 4)cout << "Hyperactif" << endl;
+	if (etat == 5)cout << "Furieux" << endl;
 	
 	
 }
