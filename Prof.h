@@ -12,13 +12,14 @@ protected:
 	int vie;
 	string nom;
 	int vitesse;
-	int attaquePuissance;
-	int defense;
+	float attaquePuissance;
+	float defense;
 	int vitesseBase;
 	int attaquePuissanceBase;
 	int defenseBase;
 	int vieBase;
 	int etat;
+	int compteuretat;
 	string sprite;
 	Sort<Prof> **sort;
 
@@ -51,6 +52,9 @@ public:
 
 	int Etat();
 	int setEtat(int m_etat);
+
+	int EtatCompteur();
+	int setEtatCompteur(int m_compteur);
 
 	bool EnVie();
 	string getSprite();

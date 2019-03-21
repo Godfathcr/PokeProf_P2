@@ -20,28 +20,33 @@ void Combat::DebuterCombat()
 	Titre();
 
 	while (CombatEnCours()) {
-		Tour tour;
-		TourCourant = tour;
+		TourCourant = Tour();
+		int premierInput;
+		int deuxiemeInput;
+
 
 		DeterminerPremierJoueur();
 
 		//Premier joueur qui choisi son attaque ou defense
 		cout << "------->" << TourCourant.PremierJoueur->Nom() << ", A toi de jouer !" << endl << endl;
 		TourCourant.PremierJoueur->afficherSorts();
-
 		cout << endl;
-		TourCourant.PremierJoueur->attaquer(ObtenirInput(0,2), TourCourant.DeuxiemeJoueur);
+		premierInput = ObtenirInput(0, 2);
 
 		//Deuxieme joueur qui choisi son attaque ou defense
 		cout << endl;
 		cout << "------->" << TourCourant.DeuxiemeJoueur->Nom() << ", A toi de jouer !" << endl << endl;
 		TourCourant.DeuxiemeJoueur->afficherSorts();
+		deuxiemeInput = ObtenirInput(0, 2);
+		cout << endl;
+
+		//Les deux joueurs qui attaquent
+		TourCourant.PremierJoueur->attaquer(premierInput, TourCourant.DeuxiemeJoueur);
+		TourCourant.DeuxiemeJoueur->attaquer(deuxiemeInput, TourCourant.PremierJoueur);
 
 		cout << endl;
-		TourCourant.DeuxiemeJoueur->attaquer(ObtenirInput(0,2), TourCourant.PremierJoueur);
-
 		TourCourant.Afficher();
-		Tours.push_back(tour);
+		Tours.push_back(TourCourant);
 	}
 }
 
@@ -188,5 +193,3 @@ int Combat::ObtenirInput(int min,  int max)
 	}
 	return x;
 }
-
-

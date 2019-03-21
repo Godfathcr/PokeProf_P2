@@ -1,3 +1,4 @@
+
 #-------------------------------------------------
 #
 # Project created by QtCreator 2019-02-11T14:50:54
@@ -29,11 +30,11 @@ SOURCES += \
     prof.cpp \
     profexample1.cpp \
     terrain.cpp \
-	 Combat.cpp \ 
-     Tour.cpp \
-     profexample2.cpp \
-     profexample3.cpp \
-	
+    Combat.cpp \
+    Tour.cpp \
+    profexample2.cpp \
+    profexample3.cpp \
+
 
 HEADERS += \
     fenetreprincipal.h \
@@ -45,13 +46,18 @@ HEADERS += \
     profexample1.h \
     sortexample1.h \
     terrain.h \
-	Combat.h \ 
-	sortDefense.h \
-	sortCaffee.h \
+    Combat.h \
+    sortDefense.h \
+    sortCaffee.h \
+    sortexample1.h \
+    CVrai.h \
+    DiviserLesEquipes.h \
+    LanceCrayon.h \
+    Overtime.h \
     tour.h \
     profexample2.h \
     profexample3.h \
-	
+
 
 
 QT += widgets

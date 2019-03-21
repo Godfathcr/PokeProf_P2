@@ -23,7 +23,7 @@ ProfExample1::ProfExample1()
 	sort[1] = new SortDefense<Prof>();
 	sort[2] = new SortCaffee<Prof>();
 	etat = 1;
-	nom = "Claudette";
+	nom = "Bulbasaur";
 
 }
 

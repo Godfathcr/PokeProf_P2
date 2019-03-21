@@ -12,7 +12,6 @@ Prof::Prof()
 	srand((unsigned)time(0));
 }
 
-
 Prof::~Prof()
 {
 }
@@ -24,13 +23,30 @@ void Prof::changerEtat()
 
 void Prof::attaquer(int m_sort, Prof *ennemi)
 {
-	if (rand() % 100< sort[m_sort]->getAccuracy())
+	int precision;
+	int random;
+	if (compteuretat <= 0)
+	{
+		etat = 1;
+	}
+	if (etat == 4)
+	{
+		
+		precision = sort[m_sort]->getAccuracy()*0.75;
+		compteuretat--;
+	}
+	else
+	{
+		precision = sort[m_sort]->getAccuracy();
+	}
+	random = rand() % 100;
+	if (random < precision)
 	{
 		sort[m_sort]->activation(*this, *ennemi);
 	}
 	else
 	{
-		cout << nom << " manque son attaque" <<endl << endl;
+		cout << nom << " utilise " << sort[m_sort]->Nom() << endl << nom << " manque son attaque" << endl;
 	}
 }
 
@@ -132,11 +148,22 @@ int Prof::Etat()
 int Prof::setEtat(int  m_etat)
 {
 	etat = m_etat;
-	/*if (etat == 1)return etat;
+	if (etat == 1)return etat;
 	if (etat == 2)return etat;
 	if (etat == 3)return etat;
-	if (etat == 4)return etat;*/
+	if (etat == 4)return etat;
 	return etat;
+}
+
+int Prof::EtatCompteur()
+{
+	return compteuretat;
+}
+
+int Prof::setEtatCompteur(int m_compteur)
+{
+	compteuretat = m_compteur;
+	return m_compteur;
 }
 
 string Prof::getSprite()

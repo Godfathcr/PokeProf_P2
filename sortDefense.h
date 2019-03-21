@@ -16,7 +16,7 @@ public:
 	void virtual activation(T &toi,T &ennemi)
 	{
 		toi.setDefense(1.25);
-		cout << toi.Defense() << endl;
+		//cout << toi.Defense() << endl;
 		cout << toi.Nom() << " utilise " << nom << endl << "La defense de " << toi.Nom() << " augmente" << endl;
 	}
 };
