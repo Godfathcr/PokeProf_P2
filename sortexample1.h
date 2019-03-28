@@ -14,11 +14,11 @@ public:
 	virtual void activation(T &toi, T &ennemi) 
 	{
 		int attaque, defense;
-		if (toi.Etat() == 5)
+		if (toi.CompteurEtat() > 0)
 			attaque = toi.AttaquePuissance() * 2;
 		else
 			attaque = toi.AttaquePuissance();
-		if (ennemi.Etat() == 5)
+		if (ennemi.CompteurEtat() > 0)
 			defense = ennemi.Defense() * 2;
 		else
 			defense = ennemi.Defense();
