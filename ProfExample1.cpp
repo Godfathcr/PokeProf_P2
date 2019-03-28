@@ -8,8 +8,6 @@
 
 #pragma once
 
-
-
 ProfExample1::ProfExample1()
 {
 	vieBase = 100;

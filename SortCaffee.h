@@ -20,7 +20,7 @@ public:
 		if (rand() % 10 < 3)
 		{
 			toi.setEtat(4);
-			cout << toi.Nom() << " manque " << nom << endl << toi.Nom() << " devient Hyperactif" << endl;
+			cout << toi.Nom() << " manque " << nom << endl << toi.Nom() << " devient empoisonne" << endl;
 			toi.setEtatCompteur(4);
 		}
 		else
