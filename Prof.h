@@ -12,6 +12,7 @@ protected:
 	int vie;
 	string nom;
 	int vitesse;
+	int compteurFurieux;
 	float attaquePuissance;
 	float defense;
 	int vitesseBase;
@@ -28,6 +29,9 @@ public:
 	virtual ~Prof();
 	void changerEtat();
 	void attaquer(int m_sort, Prof* ennemi);
+
+	int CompteurFurieux();
+	void setCompteurFurieux(int compt);
 
 	int setVie(int niveauVie);
 	int Vie();

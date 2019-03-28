@@ -27,23 +27,30 @@ void Prof::attaquer(int m_sort, Prof *ennemi)
 	int random;
 	if (compteuretat <= 0)
 	{
-		if (etat == 5)
-		{
-			defense = defense / 2;
-			attaquePuissance = attaquePuissance / 2;
-		}
 		etat = 1;
 	}
+	else
+	{
+		compteuretat--;
+	}
+
+	if (compteurFurieux = 0)
+	{
+		attaquePuissance = attaquePuissance / 1.5;
+		defense = defense / 1.5;
+	}
+
+		compteuretat--;
 	if (etat == 4)
 	{
 		
-		precision = sort[m_sort]->getAccuracy()*0.75;
-		compteuretat--;
+		precision = sort[m_sort]->getAccuracy()*0.75;	
 	}
 	else
 	{
 		precision = sort[m_sort]->getAccuracy();
 	}
+	compteuretat--;
 	random = rand() % 100;
 	if (random < precision)
 	{
@@ -185,6 +192,18 @@ bool Prof::EnVie() {
 	return Vie() > 0;
 }
 
+int Prof::CompteurFurieux()
+{
+	return compteurFurieux;
+}
+
+void Prof::setCompteurFurieux(int compt)
+{
+	if (compt <= 0)
+	{
+		compteurFurieux = compt;
+	}
+}
 /*vector<Sort<Prof>> Prof::getSort()
 {
 	return vector<Sort>();
