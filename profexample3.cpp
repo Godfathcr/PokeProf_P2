@@ -3,6 +3,9 @@
 #include "sortDefense.h"
 #include "sortexample1.h"
 #include "SortCaffee.h"
+#include "praise.h"
+#include "Escalade.h"
+#include "DiviserLesEquipes.h"
 #include <iostream>
 #include <string>
 
@@ -19,11 +22,11 @@ ProfExample3::ProfExample3()
 	vitesse = 40;
 	attaquePuissance = 30;
 	sort = new Sort<Prof>*[3];
-	sort[0] = new SortExample1<Prof>();
-	sort[1] = new SortDefense<Prof>();
-	sort[2] = new SortCaffee<Prof>();
+	sort[0] = new DiviserLesEquipes<Prof>();
+	sort[1] = new Escalade<Prof>();
+	sort[2] = new Praise<Prof>();
 	etat = 1;
-	nom = "Squirtle";
+	nom = "JP";
 
 }
 

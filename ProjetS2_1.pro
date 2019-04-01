@@ -34,6 +34,7 @@ SOURCES += \
     Tour.cpp \
     profexample2.cpp \
     profexample3.cpp \
+	cetine.cpp \
 
 
 HEADERS += \
@@ -58,6 +59,13 @@ HEADERS += \
     tour.h \
     profexample2.h \
     profexample3.h \
+	Escalade.h\
+	Praise.h\
+	MotPasse.h\
+	Cetine.h\
+	CoupDeHemblay.h\
+	Charabiat.h\
+	FausseRetraite.h\
 
 
 

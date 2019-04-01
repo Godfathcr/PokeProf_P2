@@ -1,17 +1,17 @@
 #pragma once
 #include "Sort.h"
-template<typename T> 
-class SortExample1 :public Sort<T>
+template<typename T>
+class CoupDeHemblay :public Sort<T>
 {
 public:
-	SortExample1() 
+	CoupDeHemblay()
 	{
-		accuracy = 80;
-		nom = "Exemple 1";
-		description = "Dommage à l'ennemi";
+		accuracy = 90;
+		nom = "Coup de hemblay";
+		description = "Dommage";
 	}
-	~SortExample1() {}
-	virtual void activation(T &toi, T &ennemi) 
+	~CoupDeHemblay() {}
+	virtual void activation(T &toi, T &ennemi)
 	{
 		int attaque, defense;
 		if (toi.CompteurFurieux() > 0)
@@ -26,6 +26,4 @@ public:
 		ennemi.setVie(dommage);
 		cout << toi.Nom() << " utilise " << nom << endl << ennemi.Nom() << " a recu " << -dommage << " hp de dommage" << endl;
 	}
-	
 };
-

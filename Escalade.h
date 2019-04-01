@@ -1,17 +1,19 @@
 #pragma once
 #include "Sort.h"
-template<typename T> 
-class SortExample1 :public Sort<T>
+#include <ctime>
+template <typename T>
+class Escalade :public Sort<T>
 {
 public:
-	SortExample1() 
+	Escalade()
 	{
-		accuracy = 80;
-		nom = "Exemple 1";
-		description = "Dommage à l'ennemi";
+		srand((unsigned)time(0));
+		accuracy = 60;
+		nom = "Escalade";
+		description = "Peu de dommage à l'ennemi, augmente la vitesse";
 	}
-	~SortExample1() {}
-	virtual void activation(T &toi, T &ennemi) 
+	~Escalade() {}
+	virtual void activation(T &toi, T &ennemi)
 	{
 		int attaque, defense;
 		if (toi.CompteurFurieux() > 0)
@@ -22,10 +24,10 @@ public:
 			defense = ennemi.Defense() * 2;
 		else
 			defense = ennemi.Defense();
-		int dommage = -40 * attaque / defense;
+		int dommage = -30 * attaque / defense;
 		ennemi.setVie(dommage);
+		toi.setVitesse(toi.Vitesse()*1.1);
 		cout << toi.Nom() << " utilise " << nom << endl << ennemi.Nom() << " a recu " << -dommage << " hp de dommage" << endl;
 	}
-	
 };
 

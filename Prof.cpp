@@ -10,6 +10,7 @@ Prof::Prof()
 {
 	etat = 0;
 	srand((unsigned)time(0));
+	compteurFurieux = -1;
 }
 
 Prof::~Prof()
@@ -33,14 +34,17 @@ void Prof::attaquer(int m_sort, Prof *ennemi)
 	{
 		compteuretat--;
 	}
-
-	if (compteurFurieux = 0)
+	cout << "compteurFurieux :" << compteurFurieux << endl;
+	if (compteurFurieux >= 0)
 	{
-		attaquePuissance = attaquePuissance / 1.5;
-		defense = defense / 1.5;
+		if (compteurFurieux == 0)
+		{
+			attaquePuissance = attaquePuissance / 1.5;
+			defense = defense / 1.5;
+		}
+		compteurFurieux--;
 	}
 
-		compteuretat--;
 	if (etat == 4)
 	{
 		
@@ -50,11 +54,19 @@ void Prof::attaquer(int m_sort, Prof *ennemi)
 	{
 		precision = sort[m_sort]->getAccuracy();
 	}
-	compteuretat--;
 	random = rand() % 100;
 	if (random < precision)
 	{
-		sort[m_sort]->activation(*this, *ennemi);
+		int r2= rand() % 100;
+		if (etat == 5 && r2<20)
+		{
+			sort[m_sort]->activation(*ennemi, *this);
+		}
+		else
+		{
+			sort[m_sort]->activation(*this, *ennemi);
+		}
+		
 	}
 	else
 	{
@@ -199,7 +211,7 @@ int Prof::CompteurFurieux()
 
 void Prof::setCompteurFurieux(int compt)
 {
-	if (compt <= 0)
+	if (compteurFurieux <= 0)
 	{
 		compteurFurieux = compt;
 	}
@@ -208,8 +220,6 @@ void Prof::setCompteurFurieux(int compt)
 {
 	return vector<Sort>();
 }*/
-
-
 void Prof::afficher() {
 	cout << "Votre Poke-Prof est : " << Nom() << endl;
 	cout << "Niveau de vie : " << Vie() << endl;
@@ -221,11 +231,8 @@ void Prof::afficher() {
 	if (etat == 2)cout << "Saoul" << endl;
 	if (etat == 3)cout << "Etourdis" << endl;
 	if (etat == 4)cout << "Hyperactif" << endl;
-	if (etat == 5)cout << "Furieux" << endl;
-	
-	
+	if (etat == 5)cout << "Furieux" << endl;	
 }
-
 int Prof::QuantiteDeSort() {
 	return 3;
 }
