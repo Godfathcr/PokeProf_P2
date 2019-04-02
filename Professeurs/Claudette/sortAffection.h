@@ -1,21 +1,20 @@
 #pragma once
-#pragma once
 #include "Sort.h"
 #include <ctime>
 template <typename T>
-class Overtime :public Sort<T>
+class sortAffection :public Sort<T>
 {
 public:
-	Overtime()
+	sortAffection()
 	{
 		accuracy = 100;
-		nom = "En overtime";
-		description = "augmente la vitesse";
+		nom = "Affection";
+		description = "dimminue la defense de l'adversaire";
 	}
-	~Overtime() {}
+	~sortAffection() {}
 	virtual void activation(T &toi, T &ennemi)
 	{
-		toi.setVitesse(toi.Vitesse()*1.25);
+		ennemi.setDefense(1 / 1.25);
 		cout << toi.Nom() << " utilise " << nom << endl << "La vitesse de " << toi.Nom() << " augmente" << endl << endl;
 	}
 };

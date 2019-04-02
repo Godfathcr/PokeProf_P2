@@ -2,16 +2,16 @@
 #include "Sort.h"
 #include <ctime>
 template <typename T>
-class Praise :public Sort<T>
+class sortPraise :public Sort<T>
 {
 public:
-	Praise()
+	sortPraise()
 	{
 		accuracy = 100;
 		nom = "Praise";
 		description = "augmente l'attaque";
 	}
-	~Praise() {}
+	~sortPraise() {}
 	virtual void activation(T &toi, T &ennemi)
 	{
 		toi.setAttaquePuissance(1.25);

@@ -2,6 +2,8 @@
 #define FENETREPRINCIPAL_H
 
 #include <QMainWindow>
+#include <qgridlayout.h>
+#include <qpushbutton.h>
 
 class FenetrePrincipal : public QMainWindow
 {
@@ -12,6 +14,8 @@ public:
     ~FenetrePrincipal();
 
 private:
+	QGridLayout layoutPrin;
+	QPushButton push;
 };
 
 #endif // FENETREPRINCIPAL_H

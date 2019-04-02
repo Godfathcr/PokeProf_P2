@@ -63,47 +63,69 @@ bool Combat::CombatEnCours() {
 void Combat::SelectionPersonnages() {
 	int personnageJoueur;
 
-	ProfExample1 p1;
-	ProfExample2 p2;
-	ProfExample3 p3;
+	Alex p1;
+	Claudette p2;
+	Cetine p3;
+	JP p4;
+	Domingo p5;
+	Denis p6;
+	
 
 	cout << "------------------------Selection des Personnages !------------------------" << endl << endl;
 
 	cout << "Joueur 1, choisi ton PokeProf! : " << endl << endl;
-	cout << "1. " << p1.Nom() << "       2. " << p2.Nom() << "       3. " << p3.Nom() << endl << endl;
+	cout << "1. " << p1.Nom() << "     2. " << p2.Nom() << "     3. " << p3.Nom() << "     4. " << p4.Nom() << "     5. " << p5.Nom() << "     6. " << p6.Nom() << endl << endl;
 
-	personnageJoueur = ObtenirInput(1,3);
+	personnageJoueur = ObtenirInput(1,6);
 	cout << endl;
 
 	switch (personnageJoueur) {
 	case 1:
-		Joueur1 = ProfExample1();
+		Joueur1 = Alex();
 		break;
 	case 2:
-		Joueur1 = ProfExample2();
+		Joueur1 = Claudette();
 		break;
 	case 3:
-		Joueur1 = ProfExample3();
+		Joueur1 = Cetine();
+		break;
+	case 4:
+		Joueur1 = JP();
+		break;
+	case 5:
+		Joueur1 = Domingo();
+		break;
+	case 6:
+		Joueur1 = Denis();
 		break;
 	}
 
 	cout << "Joueur 1, Vous avez choisi : " << Joueur1.Nom() << " !"<< endl << endl;
 
 	cout << "Joueur 2, choisi ton PokeProf! : " << endl << endl;
-	cout << "1. " << p1.Nom() << "       2. " << p2.Nom() << "       3. " << p3.Nom() << endl << endl;
+	cout << "1. " << p1.Nom() << "     2. " << p2.Nom() << "     3. " << p3.Nom() << "     4. " << p4.Nom() << "     5. " << p5.Nom() << "     6. " << p6.Nom() << endl << endl;
 
-	personnageJoueur = ObtenirInput(1,3);
+	personnageJoueur = ObtenirInput(1,6);
 	cout << endl;
 
 	switch (personnageJoueur) {
 	case 1:
-		Joueur2 = ProfExample1();
+		Joueur2 = Alex();
 		break;
 	case 2:
-		Joueur2 = ProfExample2();
+		Joueur2 = Claudette();
 		break;
 	case 3:
-		Joueur2 = ProfExample3();
+		Joueur2 = Cetine();
+		break;
+	case 4:
+		Joueur2 = JP();
+		break;
+	case 5:
+		Joueur2 = Domingo();
+		break;
+	case 6:
+		Joueur2 = Denis();
 		break;
 	}
 
@@ -193,3 +215,5 @@ int Combat::ObtenirInput(int min,  int max)
 	}
 	return x;
 }
+
+

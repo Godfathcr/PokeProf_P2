@@ -1,7 +1,6 @@
 #include "fenetreprincipal.h"
-#include "profexample1.h"
 #include "combat.h"
-//#include <QApplication>
+#include <QApplication>
 
 
 

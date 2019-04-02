@@ -2,9 +2,12 @@
 
 #include "terrain.h"
 #include "prof.h"
-#include "profExample1.h"
-#include "profExample2.h"
-#include "profExample3.h"
+#include "Professeurs/Alex/alex.h"
+#include "Professeurs/Cetine/cetine.h"
+#include "Professeurs/Claudette/claudette.h"
+#include "Professeurs/Denis/denis.h"
+#include "Professeurs/Domingo/domingo.h"
+#include "Professeurs/JP/jp.h"
 #include "tour.h"
 #include <vector>
 #include <sstream>

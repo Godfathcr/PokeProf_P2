@@ -1,4 +1,3 @@
-
 #-------------------------------------------------
 #
 # Project created by QtCreator 2019-02-11T14:50:54
@@ -22,51 +21,59 @@ TEMPLATE =vcapp
 CONFIG  += warn_on qt debug_and_release windows console
 
 SOURCES += \
-    main.cpp \
-    fenetreprincipal.cpp \
-    fenetreoption.cpp \
-    fenetrechoix.cpp \
-    fenetrecombat.cpp \
-    prof.cpp \
-    profexample1.cpp \
-    terrain.cpp \
-    Combat.cpp \
-    Tour.cpp \
-    profexample2.cpp \
-    profexample3.cpp \
-	cetine.cpp \
-
+    	main.cpp \
+    	fenetreprincipal.cpp \
+    	fenetreoption.cpp \
+    	fenetrechoix.cpp \
+    	fenetrecombat.cpp \
+    	prof.cpp \
+    	sort.cpp \
+        Professeurs\Alex\Alex.cpp \
+        Professeurs\Cetine\Cetine.cpp \
+        Professeurs\Claudette\Claudette.cpp \
+        Professeurs\Domingo\Domingo.cpp \
+        Professeurs\Denis\Denis.cpp \
+        Professeurs\JP\JP.cpp \
+    	terrain.cpp \
+	Combat.cpp \ 
+	tour.cpp \
+	
 
 HEADERS += \
-    fenetreprincipal.h \
-    fenetreoption.h \
-    fenetrechoix.h \
-    fenetrecombat.h \
-    prof.h \
-    sort.h \
-    profexample1.h \
-    sortexample1.h \
-    terrain.h \
-    Combat.h \
-    sortDefense.h \
-    sortCaffee.h \
-    sortexample1.h \
-	Affection.h \
-    CVrai.h \
-    DiviserLesEquipes.h \
-    LanceCrayon.h \
-    Overtime.h \
-    tour.h \
-    profexample2.h \
-    profexample3.h \
-	Escalade.h\
-	Praise.h\
-	MotPasse.h\
-	Cetine.h\
-	CoupDeHemblay.h\
-	Charabiat.h\
-	FausseRetraite.h\
-
-
+    	fenetreprincipal.h \
+    	fenetreoption.h \
+    	fenetrechoix.h \
+    	fenetrecombat.h \
+        Professeurs\Alex\alex.h \
+        Professeurs\Alex\sortCaffee.h \
+        Professeurs\Alex\sortMotDePasse.h \
+        Professeurs\Alex\sortLancerCrayon.h \
+        Professeurs\Cetine\cetine.h \
+        Professeurs\Cetine\sortCharabiat.h \
+        Professeurs\Cetine\sortFausseRetraite.h \
+        Professeurs\Cetine\sortCoupDeHambley.h \
+        Professeurs\Claudette\claudette.h \
+        Professeurs\Claudette\sortCestVrai.h \
+        Professeurs\Claudette\sortOvertime.h \
+        Professeurs\Claudette\sortAffection.h \
+        Professeurs\Denis\denis.h \
+        Professeurs\Denis\sortDiagrammeSurcharge.h \
+        Professeurs\Denis\sortLoiC21.h \
+        Professeurs\Denis\sortTick.h \
+        Professeurs\JP\jp.h \
+        Professeurs\JP\sortDiviserEquipes.h \
+        Professeurs\JP\sortPraise.h \
+        Professeurs\JP\sortEscalade.h \
+        Professeurs\Domingo\domingo.h \
+        Professeurs\Domingo\sortLaSolutionne.h \
+        Professeurs\Domingo\sortCorrectionLente.h \
+        Professeurs\Domingo\sortBaseball.h \
+	terrain.h \
+	Combat.h \ 
+        sortDefense.h \
+        sort.h \
+	prof.h \
+	sortexample1.h \
+	tour.h\
 
 QT += widgets

@@ -7,3 +7,5 @@ public:
 	Cetine();
 	~Cetine();
 };
+
+#pragma once

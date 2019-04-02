@@ -2,16 +2,16 @@
 #include "Sort.h"
 #include <ctime>
 template <typename T>
-class Charabiat :public Sort<T>
+class sortCharabiat :public Sort<T>
 {
 public:
-	Charabiat()
+	sortCharabiat()
 	{
 		accuracy = 100;
 		nom = "Charabiat";
 		description = "Confus l'ennemie";
 	}
-	~Charabiat() {}
+	~sortCharabiat() {}
 	virtual void activation(T &toi, T &ennemi)
 	{
 		ennemi.setEtat(3);

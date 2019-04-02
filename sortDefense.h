@@ -1,5 +1,5 @@
 #pragma once
-#include "Sort.h"
+#include "Sorts/Sort.h"
 template <typename T>
 class SortDefense :
 	public Sort<T>

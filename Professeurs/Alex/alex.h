@@ -1,11 +1,12 @@
 #pragma once
 #include "Prof.h"
-class ProfExample3 :
+class Alex :
 	public Prof
 {
 public:
-	ProfExample3();
-	~ProfExample3();
+	Alex();
+	~Alex();
 };
 
 #pragma once
+

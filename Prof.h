@@ -55,6 +55,7 @@ public:
 
 
 	int Etat();
+	string NomEtat();
 	int setEtat(int m_etat);
 
 	int EtatCompteur();
@@ -65,6 +66,7 @@ public:
 	void afficher();
 	void afficherSorts();
 	int QuantiteDeSort();
+	
 
 };
 

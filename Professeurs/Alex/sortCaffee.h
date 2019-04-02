@@ -3,18 +3,18 @@
 #include<ctime>
 
 template <typename T>
-class SortCaffee :
+class sortCaffee :
 	public Sort<T>
 {
 public:
-	SortCaffee()
+	sortCaffee()
 	{
 		srand((unsigned)time(0));
 		nom = "Speed gamble";
 		description = "Augmente la vitesse de beaucoup, mais avec des chances d'empoisonner";
 		accuracy = 100;
 	}
-	~SortCaffee() {}
+	~sortCaffee() {}
 	void virtual activation(T &toi, T &ennemi)
 	{
 		if (rand() % 10 < 3)

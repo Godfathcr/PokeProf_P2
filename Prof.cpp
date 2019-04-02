@@ -4,7 +4,7 @@
 #include <string>
 #include<ctime>
 
-using namespace std; 
+using namespace std;
 
 Prof::Prof()
 {
@@ -34,7 +34,7 @@ void Prof::attaquer(int m_sort, Prof *ennemi)
 	{
 		compteuretat--;
 	}
-	cout << "compteurFurieux :" << compteurFurieux << endl;
+	//cout << "compteurFurieux :" << compteurFurieux << endl;
 	if (compteurFurieux >= 0)
 	{
 		if (compteurFurieux == 0)
@@ -44,21 +44,19 @@ void Prof::attaquer(int m_sort, Prof *ennemi)
 		}
 		compteurFurieux--;
 	}
-
 	if (etat == 4)
 	{
-		
-		precision = sort[m_sort]->getAccuracy()*0.75;	
+
+		precision = sort[m_sort]->getAccuracy()*0.75;
 	}
 	else
 	{
 		precision = sort[m_sort]->getAccuracy();
 	}
 	random = rand() % 100;
-	if (random < precision)
-	{
-		int r2= rand() % 100;
-		if (etat == 5 && r2<20)
+
+		int r2 = rand() % 100;
+		if (etat == 3 && r2 < 20)
 		{
 			sort[m_sort]->activation(*ennemi, *this);
 		}
@@ -66,12 +64,8 @@ void Prof::attaquer(int m_sort, Prof *ennemi)
 		{
 			sort[m_sort]->activation(*this, *ennemi);
 		}
-		
-	}
-	else
-	{
-		cout << nom << " utilise " << sort[m_sort]->Nom() << endl << nom << " manque son attaque" << endl;
-	}
+
+
 }
 
 
@@ -125,7 +119,7 @@ int Prof::AttaquePuissance()
 
 int Prof::setAttaquePuissance(float attaque)
 {
-	attaquePuissance *= attaque; 
+	attaquePuissance *= attaque;
 	if (attaquePuissance < 0)
 	{
 		attaquePuissance = 0;
@@ -171,6 +165,14 @@ int Prof::VieBase()
 int Prof::Etat()
 {
 	return etat;
+}
+
+string Prof::NomEtat() {
+	if (etat == 1) return "Neutre";
+	if (etat == 2) return "Saoul";
+	if (etat == 3) return  "Etourdis";
+	if (etat == 4) return  "Hyperactif";
+	if (etat == 5) return "Furieux";
 }
 
 int Prof::setEtat(int  m_etat)
@@ -231,7 +233,7 @@ void Prof::afficher() {
 	if (etat == 2)cout << "Saoul" << endl;
 	if (etat == 3)cout << "Etourdis" << endl;
 	if (etat == 4)cout << "Hyperactif" << endl;
-	if (etat == 5)cout << "Furieux" << endl;	
+	if (etat == 5)cout << "Furieux" << endl;
 }
 int Prof::QuantiteDeSort() {
 	return 3;
@@ -244,3 +246,4 @@ void Prof::afficherSorts() {
 	}
 	cout << endl;
 }
+
