@@ -7,7 +7,7 @@ class FenetreChoix: public QWidget
 {
     Q_OBJECT
 public:
-    FenetreChoix();
+    FenetreChoix(int terrain);
 };
 
 #endif // FENETRECHOIX_H

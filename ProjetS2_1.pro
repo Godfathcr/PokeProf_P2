@@ -22,6 +22,7 @@ CONFIG  += warn_on qt debug_and_release windows console
 
 SOURCES += \
     	main.cpp \
+		clickLabel.cpp\
     	fenetreprincipal.cpp \
     	fenetreoption.cpp \
     	fenetrechoix.cpp \
@@ -35,14 +36,17 @@ SOURCES += \
         Professeurs\Denis\Denis.cpp \
         Professeurs\JP\JP.cpp \
     	terrain.cpp \
+		fenetrechoixterrain.cpp\
 	Combat.cpp \ 
 	tour.cpp \
 	
 
 HEADERS += \
+		clickLabel.h\
     	fenetreprincipal.h \
     	fenetreoption.h \
     	fenetrechoix.h \
+		fenetrechoixterrain.h\
     	fenetrecombat.h \
         Professeurs\Alex\alex.h \
         Professeurs\Alex\sortCaffee.h \
@@ -77,3 +81,4 @@ HEADERS += \
 	tour.h\
 
 QT += widgets
+QT += gui

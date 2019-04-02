@@ -1,6 +1,6 @@
 #include "fenetrechoix.h"
 
-FenetreChoix::FenetreChoix()
+FenetreChoix::FenetreChoix(int terrain)
 {
 
 }
