@@ -1,6 +1,6 @@
 #include "fenetrecombat.h"
 
-FenetreCombat::FenetreCombat()
+FenetreCombat::FenetreCombat(int Terrain, int P1, int P2)
 {
 
 }

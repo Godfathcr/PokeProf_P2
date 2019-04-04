@@ -21,6 +21,7 @@ unsigned const int nreg_lect_can0 = 3;      // fpga -> PC  canal 0 lus FPGA -> P
 unsigned const int nreg_lect_can1 = 4;      // fpga -> PC  canal 1 lus FPGA -> PC
 unsigned const int nreg_lect_can2 = 5;      // fpga -> PC  canal 2 lus FPGA -> PC
 unsigned const int nreg_lect_can3 = 6;      // fpga -> PC  canal 3 lus FPGA -> PC
+
 	
 public:
 	Combat();

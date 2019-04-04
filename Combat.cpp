@@ -75,7 +75,7 @@ void Combat::SelectionPersonnages() {
 	cout << "Joueur 1, choisi ton PokeProf! : " << endl << endl;
 	cout << "1. " << p1.Nom() << "     2. " << p2.Nom() << "     3. " << p3.Nom() << "     4. " << p4.Nom() << "     5. " << p5.Nom() << "     6. " << p6.Nom() << endl << endl;
 
-	personnageJoueur = ObtenirInputFiltre(1,2);
+	personnageJoueur = ObtenirInput(1,6);
 	cout << endl;
 
 	switch (personnageJoueur) {
@@ -104,7 +104,7 @@ void Combat::SelectionPersonnages() {
 	cout << "Joueur 2, choisi ton PokeProf! : " << endl << endl;
 	cout << "1. " << p1.Nom() << "     2. " << p2.Nom() << "     3. " << p3.Nom() << "     4. " << p4.Nom() << "     5. " << p5.Nom() << "     6. " << p6.Nom() << endl << endl;
 
-	personnageJoueur = ObtenirInputFiltre(1,2);
+	personnageJoueur = ObtenirInput(1,6);
 	cout << endl;
 
 	switch (personnageJoueur) {
@@ -242,12 +242,13 @@ int Combat::ObtenirInputFiltre(int min,  int max)
 		filtre3 = port.lireRegistre(nreg_lect_can2, echconv[2]);
 		filtre4 = port.lireRegistre(nreg_lect_can3, echconv[3]);
 		
+
 		cout << "Potentiometre 1 : " << echconv[0] << endl;
 		cout << "Potentiometre 2 : " << echconv[1] << endl;
 		cout << "Potentiometre 3 : " << echconv[2] << endl;
 		cout << "Potentiometre 4 : " << echconv[3] << endl;
 	}
-	return phoneme.getSonInput(echconv[0], echconv[1], echconv[2], echconv[3]);
+	return phoneme.getSonInput(port, echconv[0], echconv[1], echconv[2], echconv[3]);
 }
 
 

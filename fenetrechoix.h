@@ -14,7 +14,7 @@ public:
     FenetreChoix(int terrain);
 public slots:
 	void ChoixAlex();
-	void ChoixCetine();
+	void ChoixCetin();
 	void ChoixClaudette();
 	void ChoixDenis();
 	void ChoixDomingo();
@@ -22,25 +22,44 @@ public slots:
 	void ChoixOk();
 	void ChoixRetour();
 private:
+	int temp=0;
+	int P1 = 0;
+	int P2 = 0;
+	int Terrain;
 	QGridLayout *LayoutPerso;
 	ClickLabel *PixAlex;
-	ClickLabel *PixCetine;
+	ClickLabel *PixCetin;
 	ClickLabel *PixClaudette;
 	ClickLabel *PixDenis;
 	ClickLabel *PixDomingo;
 	ClickLabel *PixJP;
 	ClickLabel *TexAlex;
-	ClickLabel *TexCetine;
+	ClickLabel *TexCetin;
 	ClickLabel *TexClaudette;
 	ClickLabel *TexDenis;
 	ClickLabel *TexDomingo;
 	ClickLabel *TexJP;
+	ClickLabel *BackAlex;
+	ClickLabel *BackCetin;
+	ClickLabel *BackClaudette;
+	ClickLabel *BackDenis;
+	ClickLabel *BackDomingo;
+	ClickLabel *BackJP;
+
 	QPixmap *imAlex;
-	QPixmap *imCetine;
+	QPixmap *imCetin;
 	QPixmap *imClaudette;
 	QPixmap *imDenis;
 	QPixmap *imDomingo;
 	QPixmap *imJP;
+
+	QPixmap *imBAlex;
+	QPixmap *imBCetin;
+	QPixmap *imBClaudette;
+	QPixmap *imBDenis;
+	QPixmap *imBDomingo;
+	QPixmap *imBJP;
+
 	QVBoxLayout *mainLayout;
 	QHBoxLayout *ButtonLayout;
 	QPushButton *Ok;
