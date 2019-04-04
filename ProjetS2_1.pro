@@ -27,6 +27,7 @@ SOURCES += \
     	fenetreoption.cpp \
     	fenetrechoix.cpp \
     	fenetrecombat.cpp \
+		Phoneme.cpp \
     	prof.cpp \
     	sort.cpp \
         Professeurs\Alex\Alex.cpp \
@@ -48,6 +49,7 @@ HEADERS += \
     	fenetrechoix.h \
 		fenetrechoixterrain.h\
     	fenetrecombat.h \
+		Phoneme.h \
         Professeurs\Alex\alex.h \
         Professeurs\Alex\sortCaffee.h \
         Professeurs\Alex\sortMotDePasse.h \
@@ -79,6 +81,9 @@ HEADERS += \
 	prof.h \
 	sortexample1.h \
 	tour.h\
+	
+INCLUDEPATH += FPGA
+LIBS	      += FPGA/CommunicationFPGA.lib
 
 QT += widgets
 QT += gui

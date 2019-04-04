@@ -4,7 +4,6 @@ Combat::Combat()
 {
 }
 
-
 Combat::~Combat()
 {
 }
@@ -31,18 +30,18 @@ void Combat::DebuterCombat()
 		cout << "------->" << TourCourant.PremierJoueur->Nom() << ", A toi de jouer !" << endl << endl;
 		TourCourant.PremierJoueur->afficherSorts();
 		cout << endl;
-		premierInput = ObtenirInput(0, 2);
+		premierInput = ObtenirInputFiltre(1, 2);
 
 		//Deuxieme joueur qui choisi son attaque ou defense
 		cout << endl;
 		cout << "------->" << TourCourant.DeuxiemeJoueur->Nom() << ", A toi de jouer !" << endl << endl;
 		TourCourant.DeuxiemeJoueur->afficherSorts();
-		deuxiemeInput = ObtenirInput(0, 2);
+		deuxiemeInput = ObtenirInputFiltre(1, 2);
 		cout << endl;
 
 		//Les deux joueurs qui attaquent
-		TourCourant.PremierJoueur->attaquer(premierInput, TourCourant.DeuxiemeJoueur);
-		TourCourant.DeuxiemeJoueur->attaquer(deuxiemeInput, TourCourant.PremierJoueur);
+		TourCourant.PremierJoueur->attaquer(premierInput-1, TourCourant.DeuxiemeJoueur);
+		TourCourant.DeuxiemeJoueur->attaquer(deuxiemeInput-1, TourCourant.PremierJoueur);
 
 		cout << endl;
 		TourCourant.Afficher();
@@ -76,7 +75,7 @@ void Combat::SelectionPersonnages() {
 	cout << "Joueur 1, choisi ton PokeProf! : " << endl << endl;
 	cout << "1. " << p1.Nom() << "     2. " << p2.Nom() << "     3. " << p3.Nom() << "     4. " << p4.Nom() << "     5. " << p5.Nom() << "     6. " << p6.Nom() << endl << endl;
 
-	personnageJoueur = ObtenirInput(1,6);
+	personnageJoueur = ObtenirInputFiltre(1,2);
 	cout << endl;
 
 	switch (personnageJoueur) {
@@ -105,7 +104,7 @@ void Combat::SelectionPersonnages() {
 	cout << "Joueur 2, choisi ton PokeProf! : " << endl << endl;
 	cout << "1. " << p1.Nom() << "     2. " << p2.Nom() << "     3. " << p3.Nom() << "     4. " << p4.Nom() << "     5. " << p5.Nom() << "     6. " << p6.Nom() << endl << endl;
 
-	personnageJoueur = ObtenirInput(1,6);
+	personnageJoueur = ObtenirInputFiltre(1,2);
 	cout << endl;
 
 	switch (personnageJoueur) {
@@ -148,7 +147,8 @@ void Combat::SelectionTerrain() {
 	cout << "Bienvenue Joueur 1 et Joueur 2! Veuillez selectionner votre Terrain" << endl << endl;
 	cout << "1. " << t.Nom << "       2. " << t2.Nom << "       3. " << t3.Nom << endl << endl;
 
-	terrainChoisi = ObtenirInput(1,3);
+	terrainChoisi = ObtenirInputFiltre(1,2);
+	cout << terrainChoisi<<endl;
 	
 	switch (terrainChoisi) {
 		case 1 :
@@ -215,5 +215,40 @@ int Combat::ObtenirInput(int min,  int max)
 	}
 	return x;
 }
+
+int Combat::ObtenirInputFiltre(int min,  int max)
+{
+	int filtre1, filtre2, filtre3, filtre4;
+	int x = 0;
+	bool loop = true;
+	while (loop)
+	{
+		cin.clear();
+		cout << "Entrer 1 pour afficher la valeur des potentiometres et 2 pour valider" << endl;
+		string s;		
+		cin >> s;
+		cout << endl;
+
+		stringstream ss(s);
+		if (ss >> x)
+		{
+			if (x == max) {
+				loop = false;
+				continue;
+			}
+		}
+		filtre1 = port.lireRegistre(nreg_lect_can0, echconv[0]);
+		filtre2 = port.lireRegistre(nreg_lect_can1, echconv[1]);
+		filtre3 = port.lireRegistre(nreg_lect_can2, echconv[2]);
+		filtre4 = port.lireRegistre(nreg_lect_can3, echconv[3]);
+		
+		cout << "Potentiometre 1 : " << echconv[0] << endl;
+		cout << "Potentiometre 2 : " << echconv[1] << endl;
+		cout << "Potentiometre 3 : " << echconv[2] << endl;
+		cout << "Potentiometre 4 : " << echconv[3] << endl;
+	}
+	return phoneme.getSonInput(echconv[0], echconv[1], echconv[2], echconv[3]);
+}
+
 
 

@@ -11,9 +11,17 @@
 #include "tour.h"
 #include <vector>
 #include <sstream>
+#include "CommunicationFPGA.h"
+#include "Phoneme.h"
 
 class Combat
 {
+	
+unsigned const int nreg_lect_can0 = 3;      // fpga -> PC  canal 0 lus FPGA -> PC
+unsigned const int nreg_lect_can1 = 4;      // fpga -> PC  canal 1 lus FPGA -> PC
+unsigned const int nreg_lect_can2 = 5;      // fpga -> PC  canal 2 lus FPGA -> PC
+unsigned const int nreg_lect_can3 = 6;      // fpga -> PC  canal 3 lus FPGA -> PC
+	
 public:
 	Combat();
 	~Combat();
@@ -35,6 +43,10 @@ private:
 	Terrain terrain;
 	void DeterminerPremierJoueur();
 	int ObtenirInput(int,int);
+	int ObtenirInputFiltre(int,int);
+	int echconv[4]; 
+	CommunicationFPGA port;
+	Phoneme phoneme;
 	//tour
 };
 

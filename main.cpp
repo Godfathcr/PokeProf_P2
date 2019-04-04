@@ -7,20 +7,21 @@
 
 int main(int argc, char *argv[])
 {
-    QApplication a(argc, argv);
+   /*QApplication a(argc, argv);
     FenetreChoixTerrain w;
     w.show();
 	
 
-    return a.exec();
+    return a.exec();*/
+
 	
-	/*Combat c;
+	Combat c;
 	c.SelectionTerrain();
 	c.SelectionPersonnages();
 	c.Regles();
 	c.DebuterCombat();
 
-	return 0;*/
-
+	return 0;
+	
 	//test
 }
